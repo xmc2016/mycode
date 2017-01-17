@@ -1,0 +1,28 @@
+centos 安装github
+1. 安装git工具     yum install git    
+2. 查看git版本     git --version      
+3. 查看git状态     git status
+4. 全局账户配置：  git config --global user.name "github账户名"
+                  git config --global user.email "github注册邮箱"
+5.创建本地数据仓库（repository）
+cd /home
+   mkdir GitRepository
+   cd GitRepository  切换到GitRespository目录
+6.  touch README.md 创建文件（可做测试文件）
+7.  git init
+8.  git add README.md
+9.  git commit -m "first commit"
+10.  git remote add origin https://github.com/xiaocuixt/test.git
+11.  git push -u origin master
+报错：fatal: HTTP request failed
+git remote set-url origin https://xiaocuixt@github.com/xiaocuixt/test.git #注意标红部分要将官方网站中的github.com改为”用户名@github.com”
+再运行git push -u origin master按照提示输入github的登录密码即可。
+ 
+12.在命令行中push一个已经存在的数据仓库（Push an existing repository from the command line）命令如下：
+git remote add origin https://github.com/xiaocuixt/test.git
+git push -u origin master
+报错的话参考上面。
+ 
+13.把github上面的代码克隆到本地repository：
+git clone https://github.com/xiaocuixt/test.git
+   然后按照12步的方法push到github即可。

@@ -1,0 +1,16 @@
+UDP
+server.c
+1 sock 创建套接子
+2 bind 
+3 创建缓冲区 
+4 recvfrom  从另一端接受数据 
+5 打印数据，及对端IP ，端口号
+6 关闭sock
+
+
+client.c
+1 sock 创建sock套接子
+2 创建缓冲区 从标准输入读入数据
+3 sendto 向 服务器发送数据
+4关闭 sock
+
